@@ -5,7 +5,7 @@ class Solution {
      * @param String $s
      * @return String
      */
-    function longestPalindrome($s) {
+    public function longestPalindrome($s) {
         $start = 0;
         $end = 0;
         if (strlen($s) <= 1) {
@@ -27,7 +27,7 @@ class Solution {
         return substr($s, $start, $end+1);                
     }
 
-    function findFromCenter($s, $l, $r) {
+    private function findFromCenter($s, $l, $r) {
     	while ($l >= 0 && $r < strlen($s) && substr($s, $l, 1) == substr($s, $r, 1))        	
         {
             $l--;
